@@ -1,38 +1,31 @@
-# create-svelte
+### JustEd Dashboard 
+<hr>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+This is the client-side app _(frontend)_ of JustEd's LMS. 
 
-## Creating a project
+#### Running This App
 
-If you're seeing this, you've probably already done this step. Congrats!
+**1. Running Locally**
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+This method is preferred during development. After you have cloned this repository, run the following commands:
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+```sh
+npm i
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+This will run the app at http://localhost:5173/. To stop the process, press `Ctrl + C` on the active terminal tab and it shall stop the server. 
 
-To create a production version of your app:
 
-```bash
-npm run build
+**2. Using Docker**
+
+If you want to run the final build product, this method is preferred. Assuming you have docker installed in your system and you are in the root directory _(main project folder where you can see Dockerfile)_, following commands should be executed: 
+
+```sh
+docker build -t justed_lms .
+docker run -p 3000:3000 justed_lms  # The default port of builds is 3000.
 ```
 
-You can preview the production build with `npm run preview`.
+Again, to stop the process, press `Ctrl + C` on the active terminal tab and it shall stop the server. 
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+<hr>
